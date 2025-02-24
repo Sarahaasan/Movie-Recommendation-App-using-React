@@ -1,17 +1,17 @@
-import React from 'react'
-import {BrowserRouter, Route, Routes} from "react-router-dom"
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import Netflix from './pages/Netflix'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Netflix from "./pages/Netflix";
+
 export default function App() {
   return (
     <BrowserRouter>
-     <Routes>
-      <Route Excat path = "/login" element = {<Login/>}/>
-      <Route Excat path = "/signup" element = {<Signup/>}/>
-      <Route Excat path = "/" element = {<Netflix/>}/>
-     </Routes>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<Netflix />} />
+      </Routes>
     </BrowserRouter>
-    
-  )
+  );
 }
