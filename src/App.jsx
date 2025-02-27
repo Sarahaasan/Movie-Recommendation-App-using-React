@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Netflix from "./pages/Home";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Home />} />
-        <Route path="/Movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
       </Routes>
     </BrowserRouter>
   );
