@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import BackgroundImage from "../components/BackgroundImage";
 import Switch from "react-switch";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [checked, setChecked] = useState(false);
@@ -11,27 +12,37 @@ export default function Signup() {
       <BackgroundImage />
       <SignupForm>
         <WelcomeSection>
-          <h2>Welcome!</h2>
+          <h2>Join Us!</h2>
           <p className="label">
-            How about you quickly enter to see all the features!
+            Create an account and start your journey today!
           </p>
         </WelcomeSection>
         <FormCard>
           <div className="form">
-            <label className="label" htmlFor="email">
-              Hi, There
+            <label className="label" htmlFor="full-name">
+              Full Name
             </label>
-            <p className="sub-label">
-              Enter your email and password to sign in
-            </p>
+            <input type="text" id="full-name" placeholder="Your full name" />
+
             <label className="label" htmlFor="email">
               Email
             </label>
             <input type="email" id="email" placeholder="Your email address" />
+
             <label className="label" htmlFor="password">
               Password
             </label>
-            <input type="password" placeholder="Your password" />
+            <input type="password" id="password" placeholder="Your password" />
+
+            <label className="label" htmlFor="confirm-password">
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm your password"
+            />
+
             <div className="remember-me">
               <Switch
                 onChange={setChecked}
@@ -44,11 +55,14 @@ export default function Signup() {
                 width={48}
                 handleDiameter={20}
               />
-              <label htmlFor="remember">Remember me</label>
+              <label htmlFor="terms">
+                I agree to the <a href="#">Terms & Conditions</a>
+              </label>
             </div>
-            <button>SIGN IN</button>
+
+            <button>SIGN UP</button>
             <p className="sign-up">
-              Don't have an account? <a href="#">Sign up</a>
+              Already have an account? <Link to="/login">Log in</Link>
             </p>
           </div>
         </FormCard>
@@ -58,7 +72,7 @@ export default function Signup() {
 }
 
 const Container = styled.div`
-  display: flex;
+  display: flex;s
   width: 100vw;
   height: 100vh;
 `;
@@ -68,7 +82,7 @@ const SignupForm = styled.div`
   height: 100vh;
   background: #1a032a;
   display: flex;
-  flex-direction: column; /* Changed to column */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -80,7 +94,7 @@ const SignupForm = styled.div`
 
 const WelcomeSection = styled.div`
   text-align: center;
-  margin-bottom: 90px; /* Add margin for spacing */
+  margin-bottom: 90px;
 
   h2 {
     font-size: 5rem;
@@ -171,7 +185,7 @@ const FormCard = styled.div`
     font-size: 1.1rem;
   }
 
-  label[for="remember"] {
+  label[for="terms"] {
     text-align: left;
   }
 
