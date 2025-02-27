@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SideBar from "./componants/sidebar";
-import SearchBar from "./componants/searchNav";
-import MovieCard from "./componants/card";
+import SideBar from "../componants/sidebar";
+import SearchBar from "../componants/searchNav";
+import MovieCard from "../componants/card";
 
 export default function Movie() {
   const [count, setCount] = useState(0);
