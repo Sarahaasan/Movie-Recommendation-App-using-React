@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../assets/background.png";
+import background from "../assets/background copy.png";
 
 export default function BackgroundImage() {
   return (

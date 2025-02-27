@@ -75,10 +75,11 @@ const Container = styled.div`
   display: flex;s
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 `;
 
 const SignupForm = styled.div`
-  width: 80%;
+  flex: 1;
   height: 100vh;
   background: #1a032a;
   display: flex;
@@ -86,7 +87,6 @@ const SignupForm = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-
   @media (max-width: 768px) {
     width: 100%;
   }
