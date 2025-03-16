@@ -5,3 +5,7 @@ html {
   padding: 0;
   box-sizing: border-box; /* Add this line */
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities ;
