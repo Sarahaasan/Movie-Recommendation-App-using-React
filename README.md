@@ -1,12 +1,27 @@
-# React + Vite
+<h1>🎬 Netflix Clone </h1>
+Welcome to Netflix Clone  a movie recommendation app where you can discover your next favorite film. This app features a login and sign-up system integrated with Firebase, and includes pages for movies, TV shows, and a player.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Features
+🔐 User Authentication: Secure login and sign-up using Firebase.
+🎥 Movie and TV Show Browsing: Explore a wide range of movies and TV shows.
+🎭 Genre Filtering: Filter movies by genre to find exactly what you're looking for.
+🔍 Search Functionality: Search for movies by name.
+📱 Responsive Design: Enjoy a seamless experience on any device.
+Pages
+🔑 Login and Sign Up
+Authentication: Users can create an account or log in using Firebase authentication.
+Secure: Passwords are securely managed and stored.
+🎞️ Movies Page
+Dynamic Content: Displays a list of movies fetched from an API.
+Genre Selection: Filter movies by genre using a dropdown menu.
+Search Bar: Search for movies by name.
+Responsive Slider: View featured movies in a slider format.
+Scroll Detection: Navbar changes style when scrolling.
+📺 TV Shows and Player
+TV Shows: Similar functionality to the movies page, allowing users to browse and filter TV shows.
+Player: Watch trailers or clips directly within the app.
+Technologies Used
+⚛️ React: Frontend library for building user interfaces.
+🎨 Styled-Components: For styling components with CSS.
+🗃️ Redux: State management for handling app-wide state.
+🔥 Firebase: Backend service for authentication and data storage.
