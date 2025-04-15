@@ -12,20 +12,24 @@ Welcome to Netflix Clone, a movie recommendation app where you can discover your
 <br>
 <h3>Pages</h3>
 
+🏠 Home Page  
+- Welcome Message: Greet users with a friendly introduction.  
+- Featured Content: Highlight popular movies and TV shows.  
+
 🔑 Login and Sign Up  
-Authentication: Users can create an account or log in using Firebase authentication.  
-Secure: Passwords are securely managed and stored.  
+- Authentication: Users can create an account or log in using Firebase authentication.  
+- Secure: Passwords are securely managed and stored.  
 
 🎞️ Movies Page  
-Dynamic Content: Displays a list of movies fetched from an API.  
-Genre Selection: Filter movies by genre using a dropdown menu.  
-Search Bar: Search for movies by name.  
-Responsive Slider: View featured movies in a slider format.  
-Scroll Detection: Navbar changes style when scrolling.  
+- Dynamic Content: Displays a list of movies fetched from an API.  
+- Genre Selection: Filter movies by genre using a dropdown menu.  
+- Search Bar: Search for movies by name.  
+- Responsive Slider: View featured movies in a slider format.  
+- Scroll Detection: Navbar changes style when scrolling.  
 
 📺 TV Shows and Player  
-TV Shows: Similar functionality to the movies page, allowing users to browse and filter TV shows.  
-Player: Watch trailers or clips directly within the app.  
+- TV Shows: Similar functionality to the movies page, allowing users to browse and filter TV shows.  
+- Player: Watch trailers or clips directly within the app.  
 
 <h3>Technologies Used</h3>
 
