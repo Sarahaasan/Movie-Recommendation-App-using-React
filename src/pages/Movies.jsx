@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
+import SelectGenre from "../components/SelectGenre";
+import NotAvailable from "../components/NotAvailable";
 import { getGenres, fetchMovies, fetchDataByGenre } from "../store";
 
 function MoviePage() {
@@ -40,16 +42,14 @@ function MoviePage() {
     return matchesSearch && matchesGenre;
   });
 
-  const handleGenreChange = (e) => {
-    const selected = e.target.value;
-    setSelectedGenre(selected);
-    if (selected !== "All") {
-      const genreObj = genres.find((g) => g.name === selected);
-      if (genreObj) {
-        dispatch(fetchDataByGenre({ genre: genreObj.id, type: "movie" }));
-      }
+  const handleGenreChange = (genreId) => {
+    if (genreId !== "All") {
+      dispatch(fetchDataByGenre({ genre: genreId, type: "movie" }));
+      const genreName = genres.find(g => g.id === parseInt(genreId))?.name;
+      setSelectedGenre(genreName || "All");
     } else {
       dispatch(fetchMovies({ type: "movie" }));
+      setSelectedGenre("All");
     }
   };
 
@@ -74,16 +74,11 @@ function MoviePage() {
           />
         </div>
 
-        <div className="genre-selector">
-          <select value={selectedGenre} onChange={handleGenreChange}>
-            <option value="All">All</option>
-            {genres.map((genre) => (
-              <option key={genre.id} value={genre.name}>
-                {genre.name}
-              </option>
-            ))}
-          </select>
-        </div>
+        <SelectGenre 
+          genres={genres} 
+          type="movie"
+          onChange={(e) => handleGenreChange(e.target.value)}
+        />
       </div>
 
       <div className="content">
@@ -112,10 +107,7 @@ function MoviePage() {
             </div>
           )
         ) : (
-          <div className="no-results">
-            <h2>No movies found</h2>
-            <p>Try adjusting your search or filter criteria</p>
-          </div>
+          <NotAvailable />
         )}
       </div>
     </Container>
@@ -165,15 +157,6 @@ const Container = styled.div`
     font-size: 1rem;
   }
 
-  .genre-selector select {
-    padding: 0.5rem 1rem;
-    background-color: #222;
-    color: white;
-    border-radius: 4px;
-    border: none;
-    font-size: 1rem;
-  }
-
   .content {
     padding: 2rem;
   }
@@ -216,21 +199,6 @@ const Container = styled.div`
   .movie-card span {
     font-size: 0.9rem;
     color: #aaa;
-  }
-
-  .no-results {
-    text-align: center;
-    padding: 3rem;
-  }
-
-  .no-results h2 {
-    font-size: 1.8rem;
-    color: #ccc;
-  }
-
-  .no-results p {
-    font-size: 1rem;
-    color: #888;
   }
 `;
 
