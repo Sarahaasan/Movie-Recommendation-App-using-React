@@ -2,7 +2,7 @@ import {onAuthStateChanged , signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import Logo from "../assets/logo.png";
 import { firebaseAuth } from "../../../src/utils/firebase-config";
 import { FaPowerOff, FaSearch } from "react-icons/fa";
 export default function Navbar({ isScrolled }) {
@@ -28,7 +28,7 @@ export default function Navbar({ isScrolled }) {
       <nav className={`${isScrolled ? "scrolled" : ""} flex`}>
         <div className="left flex a-center">
           <div className="brand flex a-center j-center">
-            <img src={logo} alt="Logo" />
+            <img src={Logo} alt="Logo" />
           </div>
           <ul className="links flex">
             {links.map(({ name, link }) => {
