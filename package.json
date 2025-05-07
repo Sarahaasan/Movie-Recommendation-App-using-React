@@ -1,6 +1,7 @@
 {
   "name": "movie-recommendation-app",
   "private": true,
+   "homepage": "https://Sarahaasan.github.io/Movie-Recommendation-App-using-React",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
